@@ -1,4 +1,5 @@
 import { Shield, FileCheck, Award, Building } from "lucide-react";
+import documentsImage from "@/assets/documents.jpg";
 
 export const Certificates = () => {
   const certificates = [
@@ -34,6 +35,18 @@ export const Certificates = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Мы работаем полностью легально и имеем все необходимые разрешения
           </p>
+        </div>
+
+        {/* Documents Image */}
+        <div className="max-w-3xl mx-auto mb-12">
+          <div className="relative rounded-2xl overflow-hidden shadow-lg">
+            <img 
+              src={documentsImage} 
+              alt="Официальные документы и сертификаты Bezproblem" 
+              className="w-full h-64 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">

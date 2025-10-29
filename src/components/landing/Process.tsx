@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import successImage from "@/assets/success-handshake.jpg";
 
 export const Process = () => {
   const steps = [
@@ -84,10 +85,20 @@ export const Process = () => {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-4 bg-accent/10 border border-accent/20 rounded-full px-8 py-4">
-            <CheckCircle2 className="h-6 w-6 text-accent" />
-            <p className="font-semibold">Средний срок от заказа до регистрации: 10-14 дней</p>
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src={successImage} 
+              alt="Успешное партнерство с Bezproblem" 
+              className="w-full h-80 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/60 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
+              <div className="inline-flex items-center gap-4 bg-background/90 backdrop-blur border border-accent/20 rounded-full px-8 py-4">
+                <CheckCircle2 className="h-6 w-6 text-accent" />
+                <p className="font-semibold">Средний срок от заказа до регистрации: 10-14 дней</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
 import { Target, Users, Award, TrendingUp } from "lucide-react";
+import teamPhoto from "@/assets/team-photo.jpg";
+import officeBuilding from "@/assets/office-building.jpg";
 
 export const About = () => {
   const stats = [
@@ -11,12 +13,32 @@ export const About = () => {
   return (
     <section className="py-20 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
+        {/* Team Photo Header */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={teamPhoto} 
+              alt="Команда Bezproblem - профессионалы в области регистрации бизнеса" 
+              className="w-full h-[400px] object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
+              <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-4">
+                Команда Bezproblem
+              </h2>
+              <p className="text-lg text-primary-foreground/90">
+                Профессионалы с опытом работы более 10 лет
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left side - content */}
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold font-playfair">
-              О компании Bezproblem
-            </h2>
+            <h3 className="text-3xl md:text-4xl font-bold font-playfair">
+              О компании
+            </h3>
             <div className="space-y-4 text-primary-foreground/90">
               <p className="text-lg">
                 Мы специализируемся на предоставлении услуг виртуальных сідел для русскоязычных предпринимателей в Чехии с 2015 года.
@@ -30,7 +52,7 @@ export const About = () => {
             </div>
 
             <div className="space-y-3">
-              <h3 className="font-bold text-xl font-playfair">Наши ценности:</h3>
+              <h4 className="font-bold text-xl font-playfair">Наши ценности:</h4>
               <ul className="space-y-2">
                 {[
                   "Честность и прозрачность во всём",
@@ -65,22 +87,30 @@ export const About = () => {
         </div>
 
         <div className="mt-16 max-w-4xl mx-auto">
-          <div className="bg-accent/10 backdrop-blur rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold font-playfair mb-4">
-              Наши достижения
-            </h3>
-            <div className="grid sm:grid-cols-3 gap-6 text-sm">
-              <div>
-                <div className="font-bold text-lg mb-1">2015</div>
-                <div className="text-primary-foreground/80">Год основания компании</div>
-              </div>
-              <div>
-                <div className="font-bold text-lg mb-1">4 города</div>
-                <div className="text-primary-foreground/80">Локации в Чехии</div>
-              </div>
-              <div>
-                <div className="font-bold text-lg mb-1">100%</div>
-                <div className="text-primary-foreground/80">Легальность всех услуг</div>
+          <div className="relative rounded-2xl overflow-hidden">
+            <img 
+              src={officeBuilding} 
+              alt="Офис Bezproblem в Праге" 
+              className="w-full h-64 object-cover"
+            />
+            <div className="absolute inset-0 bg-primary/90 backdrop-blur-sm" />
+            <div className="relative p-8 text-center">
+              <h4 className="text-2xl font-bold font-playfair mb-4">
+                Наши достижения
+              </h4>
+              <div className="grid sm:grid-cols-3 gap-6 text-sm">
+                <div>
+                  <div className="font-bold text-lg mb-1">2015</div>
+                  <div className="text-primary-foreground/80">Год основания компании</div>
+                </div>
+                <div>
+                  <div className="font-bold text-lg mb-1">4 города</div>
+                  <div className="text-primary-foreground/80">Локации в Чехии</div>
+                </div>
+                <div>
+                  <div className="font-bold text-lg mb-1">100%</div>
+                  <div className="text-primary-foreground/80">Легальность всех услуг</div>
+                </div>
               </div>
             </div>
           </div>

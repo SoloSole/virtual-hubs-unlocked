@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail } from "lucide-react";
+import { Phone } from "lucide-react";
+import heroImage from "@/assets/hero-business.jpg";
 
 export const Hero = () => {
   const scrollToQuiz = () => {
@@ -116,14 +117,22 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Hero Image/Illustration */}
+          {/* Hero Image */}
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-accent/20 to-primary/10 p-8 flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="text-6xl font-bold font-playfair">190 Kč</div>
-                <div className="text-2xl text-muted-foreground">/ месяц</div>
-                <div className="h-1 w-24 bg-accent mx-auto rounded-full" />
-                <p className="text-lg">Самые доступные цены в Чехии</p>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src={heroImage} 
+                alt="Профессиональная консультация по открытию бизнеса в Чехии" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
+                <div className="bg-background/90 backdrop-blur rounded-xl p-6 space-y-2">
+                  <div className="text-5xl font-bold font-playfair text-accent">190 Kč</div>
+                  <div className="text-xl text-muted-foreground">/ месяц</div>
+                  <div className="h-1 w-24 bg-accent mx-auto rounded-full" />
+                  <p className="text-lg font-semibold">Самые доступные цены в Чехии</p>
+                </div>
               </div>
             </div>
             {/* Decorative elements */}
